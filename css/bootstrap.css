@@ -10,15 +10,28 @@
   border-color: #e7e7e7;
 }*/
 
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+#qian-foot{
+  font-size: smaller;
 }
 body {
   margin: 0;
   padding-top: 70px;
   padding-bottom: 70px;
+}
+/*小屏幕时，一行50px，两行，且边距为70px，共170px*/
+@media screen and (max-width: 768px) {
+  body { padding-top: 170px; }
+}
+
+
+
+
+
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 }
 
 article,
@@ -4328,6 +4341,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 0;
   border-width: 1px 0 0;
 }
+
+
+/*.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}*/
 .navbar-brand {
   float: left;
   height: 50px;
