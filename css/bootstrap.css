@@ -20,7 +20,7 @@ body {
 }
 /*小屏幕时，一行50px，两行，且边距为70px，共170px*/
 @media screen and (max-width: 768px) {
-  body { padding-top: 170px; }
+  body { padding-top: 220px; }
 }
 
 
