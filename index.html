@@ -28,12 +28,12 @@
                 counts = object.get("counts");
                 object.set("counts", counts+1);
                 object.save(null, {
-                        success: function(objectUpdate) {},
-                        error: function(model, error) {}
+                        success: function(objectUpdate) {alert("success");},
+                        error: function(model, error) {alert("fail");}
                     });
                 },
 
-            error: function(object, error) {}
+            error: function(object, error) {alert("err");}
          });
     </script>
 
