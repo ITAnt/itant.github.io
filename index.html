@@ -15,6 +15,27 @@
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/npm.js"></script>
+    <script src="bmob-min.js"></script>
+
+    <script type="text/javascript">
+        Bmob.initialize("dac03b927851c37e4fa358f10d121995", "cba164bb80a2158c58e6655f3119cdaf");
+        //获取一行数据
+        var VisitCounts = Bmob.Object.extend("VisitCounts");
+        var query = new Bmob.Query(VisitCounts);
+        var counts = 0;
+        query.get("dQqyJJJM", {
+            success: function(object) {
+                counts = object.get("counts");
+                object.set("counts", counts+1);
+                object.save(null, {
+                        success: function(objectUpdate) {},
+                        error: function(model, error) {}
+                    });
+                },
+
+            error: function(object, error) {}
+         });
+    </script>
 
 </head>
 <body class="container">
