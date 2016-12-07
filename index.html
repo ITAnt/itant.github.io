@@ -15,31 +15,31 @@
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/npm.js"></script>
-    <script src="bmob-min.js"></script>
-
-    <script type="text/javascript">
-        Bmob.initialize("dac03b927851c37e4fa358f10d121995", "cba164bb80a2158c58e6655f3119cdaf");
-        //获取一行数据
-        var VisitCounts = Bmob.Object.extend("VisitCounts");
-        var query = new Bmob.Query(VisitCounts);
-        var counts = 0;
-        query.get("dQqyJJJM", {
-            success: function(object) {
-                alert("get suc");
-                counts = object.get("counts");
-                object.set("counts", counts+1);
-                object.save(null, {
-                        success: function(objectUpdate) {alert("success");},
-                        error: function(model, error) {alert("fail");}
-                    });
-                },
-
-            error: function(object, error) {alert("err");}
-         });
-    </script>
-
+    <script src="js/bmob-min.js"></script>
 </head>
 <body class="container">
+
+<script type="text/javascript">
+    Bmob.initialize("dac03b927851c37e4fa358f10d121995", "cba164bb80a2158c58e6655f3119cdaf");
+    //获取一行数据
+    var VisitCounts = Bmob.Object.extend("VisitCounts");
+    var query = new Bmob.Query(VisitCounts);
+    var counts = 0;
+    query.get("dQqyJJJM", {
+        success: function (object) {
+            counts = object.get("counts");
+            object.set("counts", (parseInt(counts) + 1).toString());
+            object.save(null, {
+                success: function (objectUpdate) {
+                },
+                error: function (model, error) {
+                }
+            });
+        },
+        error: function (object, error) {
+        }
+    });
+</script>
 
 <!-- 导航栏 -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -74,7 +74,9 @@
     </div>
     <div class="panel-body">
         各种会员账号和数码产品低价甩卖啦，需要的请联系964161472@qq.com，或
-        <a href="http://www.baidu.com" target="_blank"><button type="button" class="btn btn-success">直接购买</button></a>。
+        <a href="http://www.baidu.com" target="_blank">
+            <button type="button" class="btn btn-success">直接购买</button>
+        </a>。
     </div>
 
     <table class="table">
