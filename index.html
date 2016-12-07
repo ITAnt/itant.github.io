@@ -25,6 +25,7 @@
         var counts = 0;
         query.get("dQqyJJJM", {
             success: function(object) {
+                alert("get suc");
                 counts = object.get("counts");
                 object.set("counts", counts+1);
                 object.save(null, {
