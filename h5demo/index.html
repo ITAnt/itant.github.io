@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="优惠购物 分享乐趣 知识共享">
+    <meta name="author" content="大白兔白糖">
+    <meta name="keywords" content="千雪崖,网赚,会员,破解,免费,软件">
+    <title>千雪崖</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/bmob-min.js"></script>
+</head>
+<body class="container">
+
+<script type="text/javascript">
+    Bmob.initialize("dac03b927851c37e4fa358f10d121995", "cba164bb80a2158c58e6655f3119cdaf");
+    //获取一行数据
+    var VisitCounts = Bmob.Object.extend("VisitCounts");
+    var query = new Bmob.Query(VisitCounts);
+    var counts = 0;
+    query.get("dQqyJJJM", {
+        success: function (object) {
+            counts = object.get("counts");
+            object.set("counts", (parseInt(counts) + 1).toString());
+            object.save(null, {
+                success: function (objectUpdate) {
+                },
+                error: function (model, error) {
+                }
+            });
+        },
+        error: function (object, error) {
+        }
+    });
+</script>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">千雪崖</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">商店</a></li>
+            <li><a href="software.html">软件</a></li>
+            <li><a href="website.html">网址</a></li>
+            <!--<li><a href="#">电影</a></li>
+            <li><a href="#">音乐</a></li>
+            <li><a href="#">图片</a></li>
+            <li><a href="#">常识</a></li>
+            <li><a href="#">文字</a></li>
+            <li><a href="#">关于</a></li>-->
+            <!--<li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">技术博客</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </li>-->
+        </ul>
+    </div>
+</nav>
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        便宜甩卖
+    </div>
+    <div class="panel-body">
+        各种会员账号和数码产品低价甩卖啦
+        <a href="http://www.baidu.com" target="_blank">
+            <button type="button" class="btn btn-success">直接购买</button>
+        </a>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>产品名称</th>
+            <th>价格（人民币）</th>
+        </tr>
+        <!--<tr>
+            <th scope="row">1</th>
+            <td>迅雷会员</td>
+            <td>10元/年</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>爱奇艺会员</td>
+            <td>10元/年</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>优酷会员</td>
+            <td>10元/年</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>115会员</td>
+            <td>10元/年</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td>流量优惠</td>
+            <td>10元1G</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>话费优惠</td>
+            <td>100减10</td>
+        </tr>
+		<tr>
+            <th scope="row">8</th>
+            <td>VPN</td>
+            <td>10元/年</td>
+        </tr>-->
+        <tr>
+            <th scope="row">7</th>
+            <td>80年收音机之王</td>
+            <td>价格面议</td>
+        </tr>
+        
+    </table>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        女生礼物
+    </div>
+    <div class="panel-body">不知道送什么礼物给女生的男生快看过来，下面我们精心挑选了一些礼物，送给女生再好不过了，点击链接即可购买哦：</div>
+
+    <a href="#" class="list-group-item list-unstyled">水杯——“一个杯子，一杯子，一辈子。”</a>
+    <a href="#" class="list-group-item list-unstyled">小说——“既以萍水逢，何以笙萧默？”</a>
+    <a href="#" class="list-group-item list-unstyled">衣服——“没有不喜欢漂亮衣服的女生。”</a>
+    <a href="#" class="list-group-item list-unstyled">耳机——“愿你听到从来没有听过的天籁之音。”</a>
+    <a href="#" class="list-group-item list-unstyled">梳子——“有人说，人的青丝是情思，这样，你每天起床梳妆都会想起我。”</a>
+    <a href="#" class="list-group-item list-unstyled">鞋子——“让她的步履更轻快。”</a>
+    <a href="#" class="list-group-item list-unstyled">手套——“天气冷了，我不想让你的手受伤。”</a>
+    <a href="#" class="list-group-item list-unstyled">钢笔——“记得写下我们的回忆。”</a>
+    <a href="#" class="list-group-item list-unstyled">围巾——“冬天再也感觉不到寒冷。”</a>
+    <a href="#" class="list-group-item list-unstyled">夜灯——“夜晚不会是漆黑的，我一直都在。”</a>
+    <a href="#" class="list-group-item list-unstyled">吉他——“文艺得想弹一曲呢。”</a>
+    <a href="#" class="list-group-item list-unstyled">U盘——“给你一个过去的U盘，看看那时我们的爱情。”</a>
+
+</div>
+<!--
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">音乐</h3>
+    </div>
+    <div class="panel-body">
+        《斑马斑马》
+        《老男孩》
+        《记得忘记》
+        《天才白痴梦》
+        《The Last of The Mohicans》
+        《Two Steps From Hell》
+        《山鹰之歌-押尾桑》
+        《会飞的贼》
+        《匆匆那年》
+        《错爱的呼唤》
+    </div>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">软件</h3>
+    </div>
+    <div class="panel-body">
+        翻墙专用：禁闻代理、蓝灯、赛风。<br/>
+        抓包专用：Fiddler、Wireshark。<br/>
+        软件网站：<a href="http://www.appinn.com/">小众软件</a>
+    </div>
+</div>-->
+
+<nav class="navbar navbar-default  navbar-fixed-bottom" role="navigation">
+    <div class="container text-center" id="qian-foot">
+        <p class="navbar-text col-md-12 col-sm-12 col-xs-12">&copy; 反馈邮箱1046883121@qq.com</p>
+    </div>
+</nav>
+</body>
+</html>
